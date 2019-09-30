@@ -1,0 +1,24 @@
+
+.card {
+  width: 50%;
+  margin: auto;
+  letter-spacing: 1.5px;
+  margin-top: 6vh;
+  text-transform: uppercase;
+  font-size: 0.90rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  background: rgb(224,223,223);
+background: linear-gradient(90deg, rgba(224,223,223,1) 0%, rgba(230,230,230,1) 27%, rgba(235,234,234,1) 49%, rgba(227,227,227,1) 98%);
+  border-radius: 7px;
+  color:rgba(210,90,142,1)!important;
+}
+
+
+.title {
+  margin-left: 45%;
+}
+input {
+  background-color: rgba(255,255,255,0.70);
+  border-color: transparent;
+}

@@ -1,0 +1,49 @@
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="grpForm" novalidate>
+      <div class="row title">
+        Edit info
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Name</label>
+        <input type="text" name="name" class="form-control">
+      </div>
+      <div *ngIf="grpForm.controls['name'].invalid && (grpForm.controls['name'].dirty || grpForm.controls['name'].touched)" class="alert alert-danger">
+        <div *ngIf="grpForm.controls['name'].errors.required">
+        name pls
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Email</label>
+        <input type="text" name="email" class="form-control" formControlName="email" #email>
+      </div>
+
+      <div *ngIf="grpForm.controls['email'].invalid && (grpForm.controls['email'].dirty || grpForm.controls['email'].touched)" class="alert alert-danger">
+        <div *ngIf="grpForm.controls['email'].errors.required">
+          Email pls
+        </div>
+        </div>
+      <div class="form-group">
+        <label class="col-md-4">Birthday</label>
+        <input type="text" name="Birthday" class="form-control" formControlName="birthday" #birthday>
+      </div>
+      <div *ngIf="grpForm.controls['birthday'].invalid && (grpForm.controls['birthday'].dirty || grpForm.controls['birthday'].touched)" class="alert alert-danger">
+        <div *ngIf="grpForm.controls['birthday'].errors.required">
+          birthday please
+        </div>
+        </div>
+      <div class="form-group">
+        <label class="col-md-4">Zipcode</label>
+        <input type="text" name="zipcode" class="form-control" formControlName="zipcode" #zipcode>
+      </div>
+      <div *ngIf="grpForm.controls['zipcode'].invalid && (grpForm.controls['zipcode'].dirty || grpForm.controls['zipcode'].touched)" class="alert alert-danger">
+        <div *ngIf="grpForm.controls['zipcode'].errors.required">
+          Zip please
+        </div>
+        </div>
+      <div class="form-group">
+          <button (click)="updateUser(name.value, email.value, birthday.value, zipcode.value)"  class="btn btn-primary">Update</button>
+        </div>
+    </form>
+  </div>
+</div>

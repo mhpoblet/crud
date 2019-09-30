@@ -1,0 +1,46 @@
+nav {
+  /*background-color: rgba(0,0,0,0.8)!important;*/
+  background: rgb(217,217,217);
+background: linear-gradient(180deg, rgba(217,217,217,1) 0%, rgba(254,252,252,1) 27%, rgba(255,255,255,1) 49%, rgba(218,218,223,1) 98%);
+  height: 10vh;
+
+  z-index: 4;
+
+}
+
+
+
+.amber-lighter-hover {
+  color: #639eb6!important;
+  -webkit-transition: .4s!important;
+  transition: .4s!important;
+}
+.amber-lighter-hover:hover {
+  -webkit-transition: .4s!important;
+  transition: .8s!important;
+  color:rgba(210,90,142,1)!important;
+}
+
+
+
+
+@media (max-width: 600px) {
+  nav {
+    height: 13vh;
+  }
+}
+
+a {
+  color: rgba(255,255,255,1)!important;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+
+
+}
+
+a:hover {
+  color: red;
+}

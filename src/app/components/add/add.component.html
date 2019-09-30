@@ -1,0 +1,46 @@
+<div class="card">
+  <div class="card-body">
+    <form [formGroup]="grpForm" novalidate>
+      <div class="form-group">
+        <label class="col-md-4">Full Name</label>
+        <input type="text" name="name" class="form-control" placeholder="Fa, Mulan" formControlName="name" #name>
+      </div>
+      <div *ngIf="grpForm.controls['name'].invalid && (grpForm.controls['name'].dirty || grpForm.controls['name'].touched)" class="alert alert-danger">
+        <div *ngIf="grpForm.controls['name'].errors.required">
+        Name please!
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Email</label>
+        <input type="text" name="email" placeholder="mulan@disney.com" class="form-control" formControlName="email" #email>
+      </div>
+
+      <div *ngIf="grpForm.controls['email'].invalid && (grpForm.controls['email'].dirty || grpForm.controls['email'].touched)" class="alert alert-danger">
+        <div *ngIf="grpForm.controls['email'].errors.required">
+          Don't forget your email!
+        </div>
+        </div>
+      <div class="form-group">
+        <label class="col-md-4">Birthday</label>
+        <input type="text" name="Birthday"placeholder="No slashes so 12/04/12 is 120412"class="form-control" formControlName="birthday" #birthday>
+      </div>
+      <div *ngIf="grpForm.controls['birthday'].invalid && (grpForm.controls['birthday'].dirty || grpForm.controls['birthday'].touched)" class="alert alert-danger">
+        <div *ngIf="grpForm.controls['birthday'].errors.required">
+          birthday please
+        </div>
+        </div>
+      <div class="form-group">
+        <label class="col-md-4">Zipcode</label>
+        <input type="text" name="zipcode" class="form-control" formControlName="zipcode" #zipcode>
+      </div>
+      <div *ngIf="grpForm.controls['zipcode'].invalid && (grpForm.controls['zipcode'].dirty || grpForm.controls['zipcode'].touched)" class="alert alert-danger">
+        <div *ngIf="grpForm.controls['zipcode'].errors.required">
+          Zip please
+        </div>
+        </div>
+      <div class="form-group">
+          <button (click)="addUser(name.value, email.value, birthday.value, zipcode.value)"  class="btn btn-primary">Add User</button>
+        </div>
+    </form>
+  </div>
+</div>
